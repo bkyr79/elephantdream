@@ -1,0 +1,12 @@
+{
+    "name": "takaomiyamashita/htdocs",
+    "authors": [
+        {
+            "name": "takaomiyamashita",
+            "email": "ty.8479@gmail.com"
+        }
+    ],
+    "require": {
+        "phpunit/phpunit": "3.7.*"
+    }
+}
