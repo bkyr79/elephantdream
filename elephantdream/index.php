@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title></title>
+<title>夢を叶えるゾウ</title>
 </head>
 <body>
 <form method="POST" action="form2.php">
