@@ -3,7 +3,7 @@
   if (isset($_SESSION['id'])){
     header('Location: index.php');
   } else if (isset($_POST['name']) && isset($_POST['password'])){
-    $dsn = 'mysql:host=localhost;dbname=desire;charset'=utf8;
+    $dsn = 'mysql:host=localhost;dbname=desire;charset=utf8';
     $user = 'desireuser';
     $password = 'password';
 
