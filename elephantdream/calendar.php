@@ -1,4 +1,8 @@
 <?php
+  include 'includes/login.php';
+?>
+
+<?php
 //タイムゾーンの設定
 date_default_timezone_set('Asia/Tokyo');
 
