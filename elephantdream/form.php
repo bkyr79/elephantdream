@@ -1,8 +1,8 @@
-<!-- <!-- <?php
+<?php
   include 'includes/login.php';
-  ?> -->
+?>
   
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
@@ -17,4 +17,4 @@
 </form>
 </body>
 </html>
-   -->
+  
