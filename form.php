@@ -1,7 +1,7 @@
-<!-- <?php
+<?php
   include 'includes/login.php';
-?> -->
-
+?>
+  
 <!DOCTYPE html>
 <html>
 <head>
