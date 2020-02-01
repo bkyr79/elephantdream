@@ -43,7 +43,7 @@
   <title>desire</title>
 </head>
 <body>
-  <h1></h1>
+  <h1>夢を叶える象</h1>
   <h1>ログイン</h2>
   <form action="login.php" method="post">
     <p>ユーザ名：<input type="text" name="name"></p>
