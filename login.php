@@ -9,9 +9,12 @@
   if (isset($_SESSION['id'])){
     header('Location: login.php');
   } else if (isset($_POST['name']) && isset($_POST['password'])){
-    $dsn = 'mysql:host=us-cdbr-iron-east-04.cleardb.net;dbname=heroku_e58da4378ec57aa;charset=utf8';
-    $user = 'b5d9b2d1576d08';
-    $password = 'b9a09ecd';
+    // $dsn = 'mysql:host=us-cdbr-iron-east-04.cleardb.net;dbname=heroku_e58da4378ec57aa;charset=utf8';
+    // $user = 'b5d9b2d1576d08';
+    // $password = 'b9a09ecd';
+    $dsn = 'mysql:host=localhost;dbname=desire;charset=utf8';
+    $user = 'desireuser';
+    $password = 'taka8479';
 
     try {
       $db = new PDO($dsn, $user, $password);
@@ -22,7 +25,6 @@
       $stmt->execute();
       
       if ($row = $stmt->fetch()){
-        #以下の内容を実行したい
         $_SESSION['id'] = $row['id'];
         header('Location: login.php');
         exit();
