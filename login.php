@@ -9,9 +9,9 @@
   if (isset($_SESSION['id'])){
     header('Location: index.php');
   } else if (isset($_POST['name']) && isset($_POST['password'])){
-    $dsn = 'mysql:host=localhost;dbname=desire;charset=utf8';
-    $user = 'desireuser';
-    $password = 'taka8479';
+    $dsn = 'mysql:host=us-cdbr-iron-east-04.cleardb.net;dbname=heroku_e58da4378ec57aa;charset=utf8';
+    $user = 'b5d9b2d1576d08';
+    $password = 'b9a09ecd';
 
     try {
       $db = new PDO($dsn, $user, $password);
@@ -43,7 +43,7 @@
   <title>desire</title>
 </head>
 <body>
-  <h1>夢を叶える象</h1>
+  <h1></h1>
   <h1>ログイン</h2>
   <form action="login.php" method="post">
     <p>ユーザ名：<input type="text" name="name"></p>
