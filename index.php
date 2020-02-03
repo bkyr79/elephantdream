@@ -1,5 +1,5 @@
 <?php 
-  // session_start();
+  session_start();
 
   // define('DB_DATABASE', 'desire');
   // define('DB_USERNAME', 'desireuser');
