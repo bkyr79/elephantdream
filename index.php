@@ -9,12 +9,12 @@
   if (isset($_SESSION['id'])){
     header('Location: form.php');
   } else if (isset($_POST['name']) && isset($_POST['password'])){
-    // $dsn = 'mysql:host=us-cdbr-iron-east-04.cleardb.net;dbname=heroku_e58da4378ec57aa;charset=utf8';
-    // $user = 'b5d9b2d1576d08';
-    // $password = 'b9a09ecd';
-    $dsn = 'mysql:host=localhost;dbname=desire;charset=utf8';
-    $user = 'desireuser';
-    $password = 'taka8479';
+    $dsn = 'mysql:host=us-cdbr-iron-east-04.cleardb.net;dbname=heroku_e58da4378ec57aa;charset=utf8';
+    $user = 'b5d9b2d1576d08';
+    $password = 'b9a09ecd';
+    // $dsn = 'mysql:host=localhost;dbname=desire;charset=utf8';
+    // $user = 'desireuser';
+    // $password = 'taka8479';
 
     try {
       $db = new PDO($dsn, $user, $password);
