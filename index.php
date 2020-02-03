@@ -6,7 +6,7 @@
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html"; charset="utf-8">
-  <title>夢を叶えるゾウ</title>
+  <title>夢</title>
 </head>
 <body>
 <form method="POST" action="form2.php">
