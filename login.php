@@ -22,7 +22,6 @@
       $stmt->execute();
       
       if ($row = $stmt->fetch()){
-        #以下の内容を実行したい
         $_SESSION['id'] = $row['id'];
         header('Location: login.php');
         exit();
