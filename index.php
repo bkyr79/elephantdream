@@ -66,10 +66,12 @@
 <body>
   <h1></h1>
   <h2></h2>
+  <!-- 関数名をwopenとする -->
+  <A href="javascript:wopen()">
   <form action="index.php" method="post">
     <p>username：<input type="text" name="name"></p>
     <p>password ：<input type="password" name="password"></p>
-    <p><input type="submit" value="ログイン"></p>
+    <p><input type="submit" value="ログイン" onClick="wopen()"></p>
   </form>
   </body>
   
