@@ -7,7 +7,7 @@
   // define('PDO_DSN', 'mysql:dbhost=localhost;dbname=' . desire);
 
   if (isset($_SESSION['id'])){
-    header('Location: form.php');
+    header('Location: preform.html');
   } else if (isset($_POST['name']) && isset($_POST['password'])){
     $dsn = 'mysql:host=us-cdbr-iron-east-04.cleardb.net;dbname=heroku_e58da4378ec57aa;charset=utf8';
     $user = 'b5d9b2d1576d08';
@@ -26,7 +26,7 @@
       
       if ($row = $stmt->fetch()){
         $_SESSION['id'] = $row['id'];
-        header('Location: form.php');
+        header('Location: preform.html');
         exit();
 
       } else {
