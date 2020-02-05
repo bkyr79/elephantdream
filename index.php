@@ -1,11 +1,4 @@
 <?php 
-  // session_start();
-
-  // define('DB_DATABASE', 'desire');
-  // define('DB_USERNAME', 'desireuser');
-  // define('DB_PASSWORD', 'taka8479');
-  // define('PDO_DSN', 'mysql:dbhost=localhost;dbname=' . desire);
-
   if (isset($_SESSION['id'])){
     header('Location: preform.html');
   } else if (isset($_POST['name']) && isset($_POST['password'])){
