@@ -1,5 +1,5 @@
 <?php 
-  session_start();
+  // session_start();
 
   // define('DB_DATABASE', 'desire');
   // define('DB_USERNAME', 'desireuser');
@@ -7,7 +7,7 @@
   // define('PDO_DSN', 'mysql:dbhost=localhost;dbname=' . desire);
 
   if (isset($_SESSION['id'])){
-    header('Location: form.php');
+    header('Location: preform.html');
   } else if (isset($_POST['name']) && isset($_POST['password'])){
     $dsn = 'mysql:host=us-cdbr-iron-east-04.cleardb.net;dbname=heroku_e58da4378ec57aa;charset=utf8';
     $user = 'b5d9b2d1576d08';
@@ -26,7 +26,7 @@
       
       if ($row = $stmt->fetch()){
         $_SESSION['id'] = $row['id'];
-        header('Location: form.php');
+        header('Location: preform.html');
         exit();
 
       } else {
@@ -39,19 +39,42 @@
   } else {
 ?>
 
+<!DOCTYPE html>
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <title>desire</title>
+  <style type="text/css">
+    body {
+      width: 400px;
+      height: 50px;
+      background-color: coral;
+      position: absolute;
+      top:200px;
+      right:0;
+      left:0;
+      margin:auto;
+    }
+    /* h2 { 
+    } */
+    p {
+      font-size: 20px;
+      font-family: "メイリオ";
+    }
+  </style>
 </head>
 <body>
   <h1></h1>
-  <h1>ログイン</h2>
+  <h2></h2>
+  <!-- 関数名をwopenとする -->
+  <A href="javascript:wopen()">
   <form action="index.php" method="post">
-    <p>ユーザ名：<input type="text" name="name"></p>
-    <p>パスワード：<input type="password" name="password"></p>
-    <p><input type="submit" value="ログイン"></p>
+    <p>username：<input type="text" name="name"></p>
+    <p>password ：<input type="password" name="password"></p>
+    <p><input type="submit" value="ログイン" onClick="wopen()"></p>
   </form>
   </body>
+  
 </html>
 <?php } ?>
+
