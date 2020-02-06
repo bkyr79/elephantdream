@@ -1,0 +1,17 @@
+body {
+  background-color: #66CCFF;
+}
+
+h1 {
+  text-align: center;
+}
+
+.sub {
+  width: 800px;
+  margin: 0px 100px 100px 100px;
+  padding: 80px 200px 0px 200px;
+}
+
+h3 {
+  text-align: left;
+}

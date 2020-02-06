@@ -48,32 +48,32 @@ $week = '';
 ?>
 
 <!DOCTYPE html>
-<html lang="la">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <title></title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/form.css">
 </head>
 <body>
 
-<div class="container">
-        <h3><a href="?ym=<?php echo $prev; ?>">&lt;</a> <?php echo $title; ?> <a href="?ym=<?php echo $next; ?>">&gt;</a></h3>
-        <table border="1">
-            <tr>
-                <th>日</th>
-                <th>月</th>
-                <th>火</th>
-                <th>水</th>
-                <th>木</th>
-                <th>金</th>
-                <th>土</th>
-            </tr>
-            <?php
-                foreach ($weeks as $week) {
-                    echo $week;
-                }
-            ?>
-        </table>
-    </div>
+<div>
+    <h3><a href="?ym=<?php echo $prev; ?>">&lt;</a> <?php echo $title; ?> <a href="?ym=<?php echo $next; ?>">&gt;</a></h3>
+    <table border="1" class="container">
+        <tr>
+            <th>日</th>
+            <th>月</th>
+            <th>火</th>
+            <th>水</th>
+            <th>木</th>
+            <th>金</th>
+            <th>土</th>
+        </tr>
+        <?php
+            foreach ($weeks as $week) {
+                echo $week;
+            }
+        ?>
+    </table>
+</div>
 </body>
 </html>

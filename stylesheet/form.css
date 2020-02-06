@@ -1,0 +1,28 @@
+body {
+  background-color: #66CCFF;
+}
+
+.top {
+  width: 800px;
+  text-align: center;
+  margin: 100px 200px 0px;
+  padding: 100px 200px 0px;
+}
+
+.bottom {
+  width: 800px;
+  text-align: center;
+  margin: 0px 50px 0px;
+}
+
+.container {
+  text-align: center;
+}
+
+.conclusion {
+
+  text-align: center;
+}
+.twitter {
+  text-align: center;
+}
