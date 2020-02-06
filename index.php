@@ -5,9 +5,6 @@
     $dsn = 'mysql:host=us-cdbr-iron-east-04.cleardb.net;dbname=heroku_e58da4378ec57aa;charset=utf8';
     $user = 'b5d9b2d1576d08';
     $password = 'b9a09ecd';
-    // $dsn = 'mysql:host=localhost;dbname=desire;charset=utf8';
-    // $user = 'desireuser';
-    // $password = 'taka8479';
 
     try {
       $db = new PDO($dsn, $user, $password);
@@ -38,33 +35,59 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <title>desire</title>
   <style type="text/css">
+
     body {
+      position: relative;
+      background: orange;
       width: 400px;
-      height: 50px;
-      background-color: coral;
-      position: absolute;
-      top:200px;
-      right:0;
-      left:0;
-      margin:auto;
+      height: 200px;
     }
-    /* h2 { 
-    } */
-    p {
-      font-size: 20px;
+
+    body {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform : translate(-50%,-50%);
+      transform : translate(-50%,-50%);
+      font-size: 25px;
       font-family: "メイリオ";
     }
+
+    form{
+      right: 100px;
+    }
+
+    .submit_button {
+      margin-left: 65px;
+    }
+
+    #personals {
+      position: relative;
+      top: 50%;
+      left: 50%;
+      margin-left: -135px;
+    }
+
+    .personal {
+      width: 200px;
+      height: 25px;
+    }
+
+    h1 {
+      font-size: 25px;
+    }
+    } */
   </style>
 </head>
 <body>
-  <h1></h1>
-  <h2></h2>
-  <!-- 関数名をwopenとする -->
+  <h1>"行動できる人になれる"アプリ</h1>
   <A href="javascript:wopen()">
   <form action="index.php" method="post">
-    <p>username：<input type="text" name="name"></p>
-    <p>password ：<input type="password" name="password"></p>
-    <p><input type="submit" value="ログイン" onClick="wopen()"></p>
+    <div id="personals">
+    <p><input type="text" name="name" placeholder="ユーザ名" class="personal"></p>
+    <p><input type="password" name="password" placeholder="パスワード" class="personal"></p>
+    </div>
+  <input type="submit" value="ログイン" class="submit_button">
   </form>
   </body>
   

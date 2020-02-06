@@ -15,3 +15,9 @@
   echo $_POST['desire5'];
   echo "』に取り組もう!!";
 ?>
+
+<div class="twitter">
+　<a href="//twitter.com/share" class="twitter-share-button" data-text="<!-- ここにTweetしたときにデフォルトでいれておきたい文字列を入れる -->" data-url="<!-- ここにTweetしたときに入れたいURLを入れる -->" data-lang="ja<!-- 日本語の場合 -->">
+ Tweet
+ </a>
+</div>

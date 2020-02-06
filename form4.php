@@ -12,7 +12,8 @@
 </head>
 <body>
 <form method="POST" action="form5.php">
-<label>さらにそれをするためには？？</label><br/>
+<label>form4</label><br/>
+<!-- <label>さらにそれをするためには？？</label><br/> -->
   <textarea name="desire4"></textarea>
   <input type="submit" onClick="location.href='/form5.php'" value="押す">
   <input type="button" value="カレンダー" onClick="location.href='/calendar.php'"/><br/><br/>

@@ -48,7 +48,7 @@ $week = '';
 ?>
 
 <!DOCTYPE html>
-<html lang="la">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <title></title>
