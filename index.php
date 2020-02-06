@@ -37,14 +37,10 @@
   <style type="text/css">
 
     body {
-      position: relative;
+      position: absolute;
       background: orange;
       width: 400px;
       height: 200px;
-    }
-
-    body {
-      position: absolute;
       top: 50%;
       left: 50%;
       -webkit-transform : translate(-50%,-50%);
