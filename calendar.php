@@ -56,24 +56,27 @@ $week = '';
 </head>
 <body>
 
-<div>
-    <h3><a href="?ym=<?php echo $prev; ?>">&lt;</a> <?php echo $title; ?> <a href="?ym=<?php echo $next; ?>">&gt;</a></h3>
-    <table border="1" class="container">
-        <tr>
-            <th>日</th>
-            <th>月</th>
-            <th>火</th>
-            <th>水</th>
-            <th>木</th>
-            <th>金</th>
-            <th>土</th>
-        </tr>
-        <?php
-            foreach ($weeks as $week) {
-                echo $week;
-            }
-        ?>
-    </table>
+<div class="kmain">
+<h3><a href="?ym=<?php echo $prev; ?>">&lt;</a> <?php echo $title; ?> <a href="?ym=<?php echo $next; ?>">&gt;</a></h3>
+<table border="1" class="container">
+    <tr>
+        <th>日</th>
+        <th>月</th>
+        <th>火</th>
+        <th>水</th>
+        <th>木</th>
+        <th>金</th>
+        <th>土</th>
+    </tr>
+    <?php
+        foreach ($weeks as $week) {
+            echo $week;
+        }
+    ?>
+</table>
+</div>
+<div class="modoru">
+<input value="戻る" onclick="history.back();" type="button">
 </div>
 </body>
 </html>

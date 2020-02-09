@@ -17,12 +17,33 @@ body {
 
 .container {
   text-align: center;
+  padding: 0px 200px 0px;
 }
 
 .conclusion {
-
   text-align: center;
 }
 .twitter {
   text-align: center;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+.kmain {
+  text-align: center;
+  margin: 100px 200px 0px;
+  padding: 50px 200px 0px;
+  border-radius: none;
+}
+
+table {
+  border: none;
+}
+
+.modoru {
+  text-align: center;
+  margin-left: 130px;
+  margin-top: 5px;
 }
