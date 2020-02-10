@@ -38,9 +38,9 @@
 
     body {
       position: absolute;
-      background: orange;
+      background: rgb(252,251,250);
       width: 400px;
-      height: 200px;
+      height: 360px;
       top: 50%;
       left: 50%;
       -webkit-transform : translate(-50%,-50%);
@@ -72,6 +72,16 @@
     h1 {
       font-size: 25px;
     }
+
+    .submit_button {
+      border: 1px solid green;
+      border-radius: 5px;
+      /* background-color: green; */
+      text-align: center;
+      width: 205px;
+      height: 35px;
+
+    }
     } */
   </style>
 </head>
@@ -83,7 +93,7 @@
     <p><input type="text" name="name" placeholder="ユーザ名" class="personal"></p>
     <p><input type="password" name="password" placeholder="パスワード" class="personal"></p>
     </div>
-  <input type="submit" value="ログイン" class="submit_button">
+    <input type="submit" value="ログイン" class="submit_button">
   </form>
   </body>
   
