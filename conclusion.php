@@ -32,7 +32,7 @@
   </div>
   <div class="twitter">
   　<a href="//twitter.com/share" class="twitter-share-button" data-text="↓今日から始めること↓" data-lang="ja">
-  twitterで行動宣言しよう！
-  </a>
-</div>
+    twitterで行動宣言しよう！
+    </a>
+  </div>
 </body>

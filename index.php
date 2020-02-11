@@ -74,9 +74,10 @@
     }
 
     .submit_button {
-      border: 1px solid green;
+      border: 1px solid red;
       border-radius: 5px;
-      /* background-color: green; */
+      background-color: red;
+      color: white;
       text-align: center;
       width: 205px;
       height: 35px;
