@@ -1,5 +1,5 @@
 body {
-  background: rgb(252,251,250);
+  background-image: url("/images/Visit pwdReykjavik iPhone Facebook Post.png");
 }
 
 .top {
@@ -11,6 +11,7 @@ body {
 
 .bottom {
   width: 800px;
+
   text-align: center;
   margin: 0px 50px 0px;
 }
@@ -24,9 +25,11 @@ body {
   text-align: center;
 }
 .twitter {
+  font-weight: bold;
   text-align: center;
   height: 50px;
   padding-top: 10px;
+  text-decoration: underline;
 }
 
 .twitter-share-button {
@@ -34,9 +37,11 @@ body {
   color: rgb(29,161,242);
   border-radius: 5px;
   text-align: center;
+  font-weight: bold;
   width: 205px;
   height: 45px;
   text-decoration: none;
+  /* text-decoration: underline; */
 }
 
 h3 {

@@ -38,7 +38,7 @@
 
     body {
       position: absolute;
-      background: rgb(252,251,250);
+      background-image: url("Users/takaomiyamashita/Downloads/Visit Reykjavik iPhone Facebook Post.png");
       width: 400px;
       height: 360px;
       top: 50%;

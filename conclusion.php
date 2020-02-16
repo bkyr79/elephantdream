@@ -30,9 +30,15 @@
   ?>
   </h2>
   </div>
+  <style type="text/css">
+      a:link    { color: rgb(34,68,136); text-decoration: none; }
+      a:visited { color: #0000CC; text-decoration: none; }
+      a:hover   { color: rgb(29,161,242); text-decoration: underline; }
+      a:active  { color: #0000cc; text-decoration: none; }
+  </style>
   <div class="twitter">
-  　<a href="//twitter.com/share" class="twitter-share-button" data-text="↓今日から始めること↓" data-lang="ja">
-    twitterで行動宣言しよう！
-    </a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-text="↓今日から始めること↓" data-lang="ja">
+  twitterで行動宣言しよう！
+  </a>
   </div>
 </body>
