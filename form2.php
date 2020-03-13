@@ -22,7 +22,7 @@
   </div>
   <div class="bottom">
     <?php
-      echo $_POST["desire"];
+      echo "具体的行動①".$_POST["desire"];
     ?>
   </div>
 </form>

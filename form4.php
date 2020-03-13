@@ -21,8 +21,7 @@
 </div>
 <div class="bottom">
   <?php
-    echo $_COOKIE['desire'];
-    echo "→";
+    echo "具体的行動①".$_COOKIE['desire']."<br/>";
     echo $_COOKIE['desire2'];
     echo "→";
     echo $_POST['desire3'];

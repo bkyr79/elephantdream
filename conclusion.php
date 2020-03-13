@@ -41,4 +41,5 @@
   twitterで行動宣言しよう！
   </a>
   </div>
+  <input type="submit" onClick="location.href='/list.php'" value="チェックリスト作成画面へ">
 </body>
