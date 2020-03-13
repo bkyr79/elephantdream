@@ -21,13 +21,13 @@
 </div>
 <div class="bottom">
   <?php
-    echo $_COOKIE['desire'];
-    echo "→";
-    echo $_COOKIE['desire2'];
-    echo "→";
-    echo $_COOKIE['desire3'];
-    echo "→";
-    echo $_POST['desire4'];
+    echo "具体的行動①".$_COOKIE['desire']."<br/>";
+    echo "<br/>";
+    echo " →具体的行動②".$_COOKIE['desire2']."<br/>";
+    echo "<br/>";
+    echo " →具体的行動③".$_COOKIE['desire3']."<br/>";
+    echo "<br/>";
+    echo " →具体的行動④".$_POST['desire4']."<br/>";
   ?>
 </div>
 </form>

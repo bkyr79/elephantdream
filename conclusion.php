@@ -12,13 +12,13 @@
     setcookie('desire5', $_POST['desire5'], time()+60*60);
     session_start();
 
-    echo $_COOKIE['desire'];
-    echo "→";
-    echo $_COOKIE['desire2'];
-    echo "→";
-    echo $_COOKIE['desire3'];
-    echo "→";
-    echo $_COOKIE['desire4'];
+    echo "具体的行動①".$_COOKIE['desire']."<br/>";
+    echo "<br/>";
+    echo " →具体的行動②".$_COOKIE['desire2']."<br/>";
+    echo "<br/>";
+    echo " →具体的行動③".$_COOKIE['desire3']."<br/>";
+    echo "<br/>";
+    echo " →具体的行動④".$_COOKIE['desire4']."<br/>";
   ?>  
   </div>
   <div class="conclusion">
@@ -40,5 +40,9 @@
   <a href="//twitter.com/share" class="twitter-share-button" data-text="↓今日から始めること↓" data-lang="ja">
   twitterで行動宣言しよう！
   </a>
+  </div>
+  <div class="twitter">
+  <a href="/calendar.php" class="twitter-share-button" data-text="↓今日から始めること↓" data-lang="ja">
+  各具体的行動を深掘りする
   </div>
 </body>
