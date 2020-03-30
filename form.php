@@ -6,6 +6,17 @@
   setcookie('desire4', "", time()-60*60*24*365);
   setcookie('desire5', "", time()-60*60*24*365);
   session_start();
+
+  $dsn = 'mysql:host=us-cdbr-iron-east-04.cleardb.net;dbname=heroku_e58da4378ec57aa;charset=utf8';
+  $user = 'b5d9b2d1576d08';
+  $password = 'b9a09ecd';
+
+  $db = new PDO($dsn, $user, $password);
+  $db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
+  $stmt = $db->prepare("INSERT INTO dream (name) VALUES (:name)");
+  // $stmt->bindParam(':name', $_POST['name'], PDO::PARAM_STR);
+  // // $stmt->bindParam(':pass', sha1($_POST['password']), PDO::PARAM_STR);
+  // $stmt->execute();  
 ?>
 
 <!DOCTYPE html>
