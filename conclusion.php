@@ -10,6 +10,7 @@
   <?php
     include 'include/login.php';
     setcookie('desire5', $_POST['desire5'], time()+60*60);
+    session_cache_limiter('none');
     session_start();
 
     echo $_COOKIE['desire'];

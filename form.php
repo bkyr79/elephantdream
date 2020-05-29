@@ -5,6 +5,7 @@
   setcookie('desire3', "", time()-60*60*24*365);
   setcookie('desire4', "", time()-60*60*24*365);
   setcookie('desire5', "", time()-60*60*24*365);
+  session_cache_limiter('none');
   session_start();
 ?>
 

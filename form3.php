@@ -1,6 +1,7 @@
 <?php
   include 'include/login.php';
   setcookie('desire2', $_POST['desire2'], time()+120);
+  session_cache_limiter('none');
   session_start();
 ?>
 
