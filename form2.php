@@ -20,6 +20,10 @@
   <textarea name="desire2"></textarea>
   <input type="submit" onClick="location.href='/form3.php'" value="押す">
   <input type="button" value="カレンダー" onClick="location.href='/calendar.php'"/><br/><br/>
+  <?php
+  global $images;
+  echo '<img class="gazo" src="./album/' . $images[rand(0, count($images))].'">';
+  ?>
   </div>
   <div class="bottom">
     <?php
