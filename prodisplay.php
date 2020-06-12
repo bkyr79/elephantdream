@@ -1,7 +1,7 @@
 <?php
-  $dream = $_POST['dream'];
+  $name = $_POST['name'];
 
-  if ($dream == ''){
+  if ($name == ''){
     header('Location: form.php');
     exit();
   }
@@ -13,7 +13,7 @@
     $db = new PDO ($dsn, $user, $password);
     $db->setAttribute(PDO::ATTR_EMULATE_PREPARES,false);
     $stmt = $db->prepare("
-      INSERT INTO desire (dream)
+      INSERT INTO dream (name)
       VALUES (:dream)"
     );
     $stmt->bindParam(':dream', $dream, PDO::PARAM_STR);
