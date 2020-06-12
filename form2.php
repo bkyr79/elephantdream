@@ -58,6 +58,11 @@
   <link rel="stylesheet" type="text/css" href="stylesheet/form.css">
   <title>夢を叶えるゾウ</title>
   <style type="text/css">
+
+    body {
+      background-image: url("/images/Visit pwdReykjavik iPhone Facebook Post.png");
+    }
+
     .top {
       width: 800px;
       text-align: center;
@@ -122,7 +127,7 @@
     }
 
     .explanation {
-      color: blue;
+      color: #66FFFF;
       font-size: 18px;
       font-weight: bold;
       font-family: Georgia, serif;
@@ -167,17 +172,13 @@
       <input type="submit" value="次へ" class="next" onClick="location.href='/form3.php'"/>
       <input type="button" value="カレンダーを使う" class="calendar" onClick="location.href='calendar.php'"/><br><br>
     </form>  
-    <form action="form2.php" method="post" enctype="multipart/form-data">
-      <input type="file" name="image">
-      <input type="submit" value="背景ランダム表示"> 
-      <?php
-      if ($msg) {
-        echo '<p>' . $msg . '</p>';
-      }
-      sort($images);
-      ?>
-    </form>
   </div>
+  <div class="bottom">
+    <?php
+      echo $_POST['desire'];
+    ?>
+  </div>
+
 <?php
 
 $column = 1;

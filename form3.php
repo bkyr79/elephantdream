@@ -72,7 +72,6 @@ body {
 
 .bottom {
   width: 800px;
-
   text-align: center;
   margin: 0px 50px 0px;
 }
@@ -127,7 +126,7 @@ table {
 }
 
 .explanation {
-  color: blue;
+  color: #66FFFF;
   font-size: 18px;
   font-weight: bold;
   font-family: Georgia, serif;
@@ -171,15 +170,7 @@ html, body{
       <input type="submit" value="次へ" class="next" onClick="location.href='/form4.php'"/>
       <input type="button" value="カレンダーを使う" class="calendar" onClick="location.href='calendar.php'"/><br><br>
     </form>  
-    <form action="form2.php" method="post" enctype="multipart/form-data">
-      <input type="file" name="image">
-      <input type="submit" value="背景ランダム表示"> 
-      <?php
-      if ($msg) {
-        echo '<p>' . $msg . '</p>';
-      }
-      sort($images);
-      ?>
+  </div>
   <div class="bottom">
     <?php
       echo $_COOKIE['desire'];
@@ -187,8 +178,7 @@ html, body{
       echo $_POST['desire2'];
     ?>
   </div>
-    </form>
-  </div>
+
 <?php
 
 $column = 1;
