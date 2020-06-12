@@ -1,7 +1,7 @@
 <?php
   $dream = $_POST['dream'];
 
-  if ($name == ''){
+  if ($dream == ''){
     header('Location: form.php');
     exit();
   }
