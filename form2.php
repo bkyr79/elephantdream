@@ -6,117 +6,143 @@
   
 ?>
 
+<?php
+  $msg = null;
+  if (isset($_FILES['image']) && is_uploaded_file ($_FILES['image']['tmp_name'])) {
+    $old_name = $_FILES['image']['tmp_name'];
+    $new_name = $_FILES['image']['name'];
+    if (move_uploaded_file($old_name, 'album/' . $new_name)) {
+      $msg = 'アップロードしました。';
+    } else {
+      $msg = 'アップロードできませんでした。';
+    }
+  }
+?>
+
+<?php
+  $images = array();
+  if ($handle = opendir('./album')){
+    
+    while($entry = readdir($handle)){
+      
+      if ($entry != "." && $entry != ".."){
+        $images[] =$entry;
+        
+      }
+      
+    }
+    
+    closedir($handle);
+  }
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<link rel="stylesheet" type="text/css" href="stylesheet/form.css">
-<title></title>
-<style type="text/css">
+  <meta http-equiv="Content-Type" content="text/html"; charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="stylesheet/form.css">
+  <title>夢を叶えるゾウ</title>
+  <style type="text/css">
+    .top {
+      width: 800px;
+      text-align: center;
+      margin: 100px 200px 0px;
+      padding: 100px 200px 0px 100px;
+      position: fixed;
+    }
 
-body {
-  background-image: url("/images/Visit pwdReykjavik iPhone Facebook Post.png");
-}
+    .bottom {
+      width: 800px;
+      text-align: center;
+      margin: 0px 50px 0px;
+    }
 
-.top {
-  width: 800px;
-  text-align: center;
-  margin: 100px 200px 0px;
-  padding: 100px 200px 0px 100px;
-}
+    .container {
+      text-align: center;
+      padding: 0px 200px 0px;
+    }
 
-.bottom {
-  width: 800px;
+    .conclusion {
+      text-align: center;
+    }
+    .twitter {
+      font-weight: bold;
+      text-align: center;
+      height: 50px;
+      padding-top: 10px;
+      text-decoration: underline;
+    }
 
-  text-align: center;
-  margin: 0px 50px 0px;
-}
+    .twitter-share-button {
+      border: rgb(29,161,242);
+      color: rgb(29,161,242);
+      border-radius: 5px;
+      text-align: center;
+      font-weight: bold;
+      width: 205px;
+      height: 45px;
+      text-decoration: none;
+      /* text-decoration: underline; */
+    }
 
-.container {
-  text-align: center;
-  padding: 0px 200px 0px;
-}
+    h3 {
+      font-size: 30px;
+    }
 
-.conclusion {
-  text-align: center;
-}
-.twitter {
-  font-weight: bold;
-  text-align: center;
-  height: 50px;
-  padding-top: 10px;
-  text-decoration: underline;
-}
+    .kmain {
+      text-align: center;
+      margin: 100px 200px 0px;
+      padding: 50px 200px 0px;
+      border-radius: none;
+    }
 
-.twitter-share-button {
-  border: rgb(29,161,242);
-  color: rgb(29,161,242);
-  border-radius: 5px;
-  text-align: center;
-  font-weight: bold;
-  width: 205px;
-  height: 45px;
-  text-decoration: none;
-  /* text-decoration: underline; */
-}
+    table {
+      border: none;
+    }
 
-h3 {
-  font-size: 30px;
-}
+    .modoru {
+      text-align: center;
+      margin-left: 130px;
+      margin-top: 5px;
+    }
 
-.kmain {
-  text-align: center;
-  margin: 100px 200px 0px;
-  padding: 50px 200px 0px;
-  border-radius: none;
-}
+    .explanation {
+      color: blue;
+      font-size: 18px;
+      font-weight: bold;
+      font-family: Georgia, serif;
+    }
 
-table {
-  border: none;
-}
+    .textarea {
+      width: 250px;
+      height: 100px;
+      background-color: rgb(205,255,255);
+      color: rgb(69,71,74);
+    }
 
-.modoru {
-  text-align: center;
-  margin-left: 130px;
-  margin-top: 5px;
-}
+    .next {
+      width: 125px;
+      height: 40px;
+      font-weight: bold;20:
+    }
 
-.explanation {
-  color: blue;
-  font-size: 18px;
-  font-weight: bold;
-  font-family: Georgia, serif;
-}
+    .calendar {
+      width: 120px;
+      height: 40px;
+    }
 
-.textarea {
-  width: 250px;
-  height: 100px;
-  background-color: rgb(205,255,255);
-  color: rgb(69,71,74);
-}
+    html, body{
+      width: 100%;
+      height: 100%;
+    }
 
-.next {
-  width: 125px;
-  height: 40px;
-  font-weight: bold;20:
-}
+    .gazo {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
 
-.calendar {
-  width: 120px;
-  height: 40px;
-}
-
-html, body{
-  width: 100%;
-  height: 100%;
-}
-
-.gazo {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-</style>
+  </style>
 </head>
 <body>
   <div class="top">
@@ -136,11 +162,6 @@ html, body{
       sort($images);
       ?>
     </form>
-  </div>
-  <div class="bottom">
-    <?php
-      echo $_POST["desire"];
-    ?>
   </div>
 <?php
 
@@ -199,5 +220,6 @@ if (count($images) > 0){
   echo '<p>画像はまだありません。</p>';
 }   
 ?>
+
 </body>     
 </html>

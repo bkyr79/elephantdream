@@ -1,3 +1,33 @@
+<?php
+  $msg = null;
+  if (isset($_FILES['image']) && is_uploaded_file ($_FILES['image']['tmp_name'])) {
+    $old_name = $_FILES['image']['tmp_name'];
+    $new_name = $_FILES['image']['name'];
+    if (move_uploaded_file($old_name, 'album/' . $new_name)) {
+      $msg = 'アップロードしました。';
+    } else {
+      $msg = 'アップロードできませんでした。';
+    }
+  }
+?>
+
+<?php
+  $images = array();
+  if ($handle = opendir('./album')){
+    
+    while($entry = readdir($handle)){
+      
+      if ($entry != "." && $entry != ".."){
+        $images[] =$entry;
+        
+      }
+      
+    }
+    
+    closedir($handle);
+  }
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
