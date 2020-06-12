@@ -1,5 +1,5 @@
 <?php
-  $name = $_POST['name'];
+  $name = $_POST['desire'];
 
   if ($name == ''){
     header('Location: form.php');
