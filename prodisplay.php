@@ -5,18 +5,16 @@
     header('Location: form.php');
     exit();
   }
+
   $dsn = 'mysql:host=us-cdbr-iron-east-04.cleardb.net;dbname=heroku_e58da4378ec57aa;charset=utf8';
   $user = 'b5d9b2d1576d08';
   $password = 'b9a09ecd';
 
-  try {
+  try { 
     $db = new PDO ($dsn, $user, $password);
     $db->setAttribute(PDO::ATTR_EMULATE_PREPARES,false);
-    $stmt = $db->prepare("
-      INSERT INTO dream (name)
-      VALUES (:dream)"
-    );
-    $stmt->bindParam(':dream', $dream, PDO::PARAM_STR);
+    $stmt = $db->prepare(" SELECT * FROM dream WHERE name=:name ");
+    $stmt->bindParam(':name', $name, PDO::PARAM_STR);
     $stmt->execute();
 
     header('Location: form.php');
