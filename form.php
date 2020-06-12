@@ -217,7 +217,7 @@ function columnGallery($files, $column, $width){
 
 }
 
-if (count($images) > 0){
+if (count($images) >= 0){
   echo '<img class="gazo" src="./album/' . $images[rand(0, count($images))].'">';
 } else {
   echo '<p>画像はまだありません。</p>';
