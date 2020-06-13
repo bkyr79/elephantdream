@@ -1,6 +1,6 @@
 <?php
   include 'include/login.php';
-  // setcookie('desire', $_POST["desire"], time()+120);
+  setcookie('desire', $_POST["desire"], time()+120);
   session_cache_limiter('none');
   session_start();
   
@@ -194,7 +194,7 @@
   try { 
     $db = new PDO ($dsn, $user, $password);
     $db->setAttribute(PDO::ATTR_EMULATE_PREPARES,false);
-    $stmt = $db->prepare(" SELECT * FROM dream WHERE name=:name ");
+    $stmt = $db->prepare(" INSERT INTO dream (name) VALUES (:name) ");
     $stmt->bindParam(':name', $name, PDO::PARAM_STR);
     $stmt->execute();
 
