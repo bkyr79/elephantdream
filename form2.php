@@ -179,7 +179,7 @@
     ?>
   </div>
 
-  <?php
+<?php
   // $name = $_POST['desire'];
 
   // if ($name == ''){
