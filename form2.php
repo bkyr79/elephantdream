@@ -204,7 +204,7 @@
 
     // header('Location: form.php');
     // exit();
-  } catch(PDOException $e) {
+  } catch(Exception $e) {
     // die ('エラー：' . $e->getMessage());
     echo '<span class="error">エラーがありました。</span><br>';
     echo $e->getMessage();
