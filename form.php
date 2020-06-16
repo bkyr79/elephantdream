@@ -262,7 +262,7 @@ if (count($images) >= 0){
       // $stmt->bindParam(':name', $name, PDO::PARAM_STR);
       // $stmt->execute();
       $db->setAttribute(PDO::ATTER_ERRMODE, PDO::ERRMODE_EXCEPTION);
-      echo "データベースに接続しました。";
+      echo $_COOKIE['desire'];
       $db = NULL;
 
       // header('Location: form.php');
