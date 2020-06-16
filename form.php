@@ -13,6 +13,7 @@
   $msg = null;
   if (isset($_FILES['image']) && is_uploaded_file ($_FILES['image']['tmp_name'])) {
     $old_name = $_FILES['image']['tmp_name'];
+    // $new_name = $_FILES['image']['name'];
     $new_name = date("YmdHis");
     $new_name .= mt_rand();
     switch (exif_imagetype($_FILES['image']['tmp_name'])){
@@ -37,22 +38,22 @@
   }
 ?>
 
-<!-- <?php
-  // $images = array();
-  // if ($handle = opendir('./album')){
+<?php
+  $images = array();
+  if ($handle = opendir('./album')){
     
-  //   while($entry = readdir($handle)){
+    while($entry = readdir($handle)){
       
-  //     if ($entry != "." && $entry != ".."){
-  //       $images[] =$entry;
+      if ($entry != "." && $entry != ".."){
+        $images[] =$entry;
         
-  //     }
+      }
       
-  //   }
+    }
     
-  //   closedir($handle);
-  // }
-?> -->
+    closedir($handle);
+  }
+?>
 
 <!DOCTYPE html>
 <html>
@@ -101,6 +102,7 @@
       width: 205px;
       height: 45px;
       text-decoration: none;
+      /* text-decoration: underline; */
     }
 
     h3 {
@@ -180,49 +182,65 @@
       ?>
     </form>
   </div>
-
 <?php
-  $column = 1;
-  $width = 1000;
-  $dir = './album';
-  // 
-  $list = scandir($dir);
 
-  $files = array();
-  foreach($list as $value){
-    if(is_file($dir . $value)){
-      $files[] = $dir . $value;
-    }
+$column = 1;
+$width = 1000;
+$dir = './album';
+// 
+$list = scandir($dir);
+
+$files = array();
+foreach($list as $value){
+  if(is_file($dir . $value)){
+    $files[] = $dir . $value;
   }
+}
 
-  function columnGallery($files, $column, $width){
+function columnGallery($files, $column, $width){
 
-    $div = array();
-    
-    for($i=0;$i<$column;$i++){
-      $heightTotal[$i] = 0;
-    }
-    
-    foreach($files as $file){
-      asort($heightTotal);
-      $keys   = array_keys($heightTotal);
-      $target   = reset($keys);
-      $size   = getimagesize($file);
-      $height   = $size[1];
-        if(!isset($div[$target])) $div[$target] = array();
-      $div[$target][] = $file;
-      $heightTotal[$target] += $height;
-    }
+  $div = array();
+   
+  for($i=0;$i<$column;$i++){
+    $heightTotal[$i] = 0;
   }
-
-  if (count($images) >= 0){
-    echo '<img class="gazo" src="./album/' . $images[rand(0, count($images))].'">';
-  // } else if ( $_FILES=="./album/" ) {
-  //   header('Location: form2.php');
-  } else {
-    echo '<p>画像はまだありません。</p>';
+   
+  foreach($files as $file){
+    asort($heightTotal);
+    $keys   = array_keys($heightTotal);
+    $target   = reset($keys);
+    $size   = getimagesize($file);
+    $height   = $size[1];
+    if(!isset($div[$target])) $div[$target] = array();
+    $div[$target][] = $file;
+    $heightTotal[$target] += $height;
   }
-?>
+   
+  // foreach($div as $files){
+  //   echo "<div class=\"column\">\n";
+  //   foreach($files as $file){
+  //     echo "<img src=\"{$file}\" style=\"width:{$width}px;\" /><br />\n";
+  //   }
+  //   echo "</div>\n";
+  // }
+  // foreach($div as $files){
+  //   echo "<div class=\"column\">\n";
+  //   foreach($files as $file){
+  //     echo "<img src=\"{$file}\" style=\"width:{$width}px;\" /><br />\n";
+  //   }
+  //   echo "</div>\n";
+  // }
+
+}
+
+if (count($images) >= 0){
+  echo '<img class="gazo" src="./album/' . $images[rand(0, count($images))].'">';
+// } else if ( $_FILES=="./album/" ) {
+//   header('Location: form2.php');
+} else {
+  echo '<p>画像はまだありません。</p>';
+}   
+?>       
 
 <?php
   $name = $_POST['desire'];
