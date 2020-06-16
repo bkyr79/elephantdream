@@ -12,7 +12,7 @@
   $password = 'b9a09ecd';
 
   try {
-    $db = new PDO($db, $user, $password);
+    $db = new PDO($dsn, $user, $password);
     $pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
     $pdo->seAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     echo "データベースに接続しました";
