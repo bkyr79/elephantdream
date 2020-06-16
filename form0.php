@@ -13,8 +13,8 @@
 
   try {
     $db = new PDO($dsn, $user, $password);
-    $pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
-    $pdo->seAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
+    $db->seAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     echo "データベースに接続しました";
     $db = NULL;
   } catch (Exception $e) {
