@@ -165,10 +165,10 @@
 </head>
 <body>
   <div class="top">
-    <form action="form2.php" method="post">
+    <form action="form.php" method="post">
       <div class="explanation">叶えたい夢を入力してください (なるべく具体的に)</div>
       <textarea name="desire" class="textarea" placeholder="お金持ちになりたい。"></textarea><br>
-      <input type="submit" value="次へ" class="next" onClick="location.href='/form2.php'"/>
+      <input type="submit" value="次へ" class="next" onClick="location.href='/form.php'"/>
       <input type="button" value="カレンダーを使う" class="calendar" onClick="location.href='calendar.php'"/><br><br>
     </form>  
     <form action="form.php" method="post" enctype="multipart/form-data">
