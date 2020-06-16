@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="utf-8">
-<title>pdoでデータベースに接続する</title>
+  <meta http-equiv="Content-Type" content="text/html"; charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="stylesheet/form.css">
+  <title>pdoでデータベースに接続する</title>
 </head>
 <body>
 <div>
