@@ -16,7 +16,7 @@
     $db = new PDO($dsn, $user, $password);
     $db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
     $db->seAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo "データベースに接続しました";
+    echo 'データベースに接続しました';
     $db = NULL;
   } catch (Exception $e) {
     echo '<span class="error">エラーがでました</span><br>';
