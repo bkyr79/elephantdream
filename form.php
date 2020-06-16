@@ -10,40 +10,6 @@
 ?>
 
 <?php
-  // $name = $_POST['desire'];
-
-  // if ($name == ''){
-  //   header('Location: form.php');
-  //   exit();
-  // }
-
-  $dsn = 'mysql:host=us-cdbr-iron-east-04.cleardb.net;dbname=heroku_e58da4378ec57aa;charset=utf8';
-  $user = 'b5d9b2d1576d08';
-  $password = 'b9a09ecd';
-
-
-  try { 
-    $db = new PDO ($dsn, $user, $password);
-    $db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
-    // $stmt = $db->prepare(" INSERT INTO dream (name) VALUES (:name) ");
-    // $stmt->bindParam(':name', $name, PDO::PARAM_STR);
-    // $stmt->execute();
-    $db->setAttribute(PDO::ATTER_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo "データベースに接続しました。";
-    $db = NULL;
-
-    // header('Location: form.php');
-    // exit();
-  } catch(Exception $e) {
-    // die ('エラー：' . $e->getMessage());
-    echo '<span class="error">エラーがありました。</span><br>';
-    echo $e->getMessage();
-    exit();
-  }
-?>
-
-
-<?php
   $msg = null;
   if (isset($_FILES['image']) && is_uploaded_file ($_FILES['image']['tmp_name'])) {
     $old_name = $_FILES['image']['tmp_name'];
@@ -275,6 +241,39 @@ if (count($images) >= 0){
   echo '<p>画像はまだありません。</p>';
 }   
 ?>       
+
+<?php
+  // $name = $_POST['desire'];
+
+  // if ($name == ''){
+  //   header('Location: form.php');
+  //   exit();
+  // }
+
+  $dsn = 'mysql:host=us-cdbr-iron-east-04.cleardb.net;dbname=heroku_e58da4378ec57aa;charset=utf8';
+  $user = 'b5d9b2d1576d08';
+  $password = 'b9a09ecd';
+
+
+  try { 
+    $db = new PDO ($dsn, $user, $password);
+    $db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
+    // $stmt = $db->prepare(" INSERT INTO dream (name) VALUES (:name) ");
+    // $stmt->bindParam(':name', $name, PDO::PARAM_STR);
+    // $stmt->execute();
+    $db->setAttribute(PDO::ATTER_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    echo "データベースに接続しました。";
+    $db = NULL;
+
+    // header('Location: form.php');
+    // exit();
+  } catch(Exception $e) {
+    // die ('エラー：' . $e->getMessage());
+    echo '<span class="error">エラーがありました。</span><br>';
+    echo $e->getMessage();
+    exit();
+  }
+?>
 
 </body>
 </html>
