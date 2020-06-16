@@ -245,11 +245,11 @@ if (count($images) >= 0){
 <?php
   $name = $_POST['desire'];
 
-  if (！$name == ''){
+  if (!($name == '')){
   //   header('Location: form.php');
   //   exit();
   // } else {
-    
+
     $dsn = 'mysql:host=us-cdbr-iron-east-04.cleardb.net;dbname=heroku_e58da4378ec57aa;charset=utf8';
     $user = 'b5d9b2d1576d08';
     $password = 'b9a09ecd';
