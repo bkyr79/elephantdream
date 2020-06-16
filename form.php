@@ -180,49 +180,49 @@
       ?>
     </form>
   </div>
-<!-- <?php
 
-// $column = 1;
-// $width = 1000;
-// $dir = './album';
-// // 
-// $list = scandir($dir);
+<?php
+  $column = 1;
+  $width = 1000;
+  $dir = './album';
+  // 
+  $list = scandir($dir);
 
-// $files = array();
-// foreach($list as $value){
-//   if(is_file($dir . $value)){
-//     $files[] = $dir . $value;
-//   }
-// }
+  $files = array();
+  foreach($list as $value){
+    if(is_file($dir . $value)){
+      $files[] = $dir . $value;
+    }
+  }
 
-// function columnGallery($files, $column, $width){
+  function columnGallery($files, $column, $width){
 
-//   $div = array();
-   
-//   for($i=0;$i<$column;$i++){
-//     $heightTotal[$i] = 0;
-//   }
-   
-//   foreach($files as $file){
-//     asort($heightTotal);
-//     $keys   = array_keys($heightTotal);
-//     $target   = reset($keys);
-//     $size   = getimagesize($file);
-//     $height   = $size[1];
-//        if(!isset($div[$target])) $div[$target] = array();
-//     $div[$target][] = $file;
-//     $heightTotal[$target] += $height;
-//   }
-// }
+    $div = array();
+    
+    for($i=0;$i<$column;$i++){
+      $heightTotal[$i] = 0;
+    }
+    
+    foreach($files as $file){
+      asort($heightTotal);
+      $keys   = array_keys($heightTotal);
+      $target   = reset($keys);
+      $size   = getimagesize($file);
+      $height   = $size[1];
+        if(!isset($div[$target])) $div[$target] = array();
+      $div[$target][] = $file;
+      $heightTotal[$target] += $height;
+    }
+  }
 
-// if (count($images) >= 0){
-//   echo '<img class="gazo" src="./album/' . $images[rand(0, count($images))].'">';
-// // } else if ( $_FILES=="./album/" ) {
-// //   header('Location: form2.php');
-// } else {
-//   echo '<p>画像はまだありません。</p>';
-// }
-?>        -->
+  if (count($images) >= 0){
+    echo '<img class="gazo" src="./album/' . $images[rand(0, count($images))].'">';
+  // } else if ( $_FILES=="./album/" ) {
+  //   header('Location: form2.php');
+  } else {
+    echo '<p>画像はまだありません。</p>';
+  }
+?>
 
 <?php
   $name = $_POST['desire'];
