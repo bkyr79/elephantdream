@@ -18,7 +18,7 @@
     $db->seAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     echo 'データベースに接続しました';
     $db = NULL;
-  } catch (Exception $e) {
+  } catch (PDOException $e) {
     echo '<span class="error">エラーがでました</span><br>';
     echo $e->getMessage();
     exit();
