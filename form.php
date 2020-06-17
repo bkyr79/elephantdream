@@ -249,9 +249,7 @@ if (count($images) >= 0){
   //   header('Location: form.php');
   //   exit();
   // } else {
-    if (isset($_SESSION['id'])){
-      header('Location: preform.html');
-    } else if (isset($_POST['name']) && isset($_POST['password'])){
+    if (isset($_POST['desire'])){
       $dsn = 'mysql:host=us-cdbr-iron-east-04.cleardb.net;dbname=heroku_e58da4378ec57aa;charset=utf8';
       $user = 'b5d9b2d1576d08';
       $password = 'b9a09ecd';
