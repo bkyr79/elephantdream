@@ -16,7 +16,8 @@
       
       if ($row = $stmt->fetch()){
         $_SESSION['id'] = $row['id'];
-        header('Location: preform.html');
+        // header('Location: preform.html');
+        echo "接続できました";
         exit();
 
       } else {
