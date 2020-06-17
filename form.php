@@ -164,7 +164,7 @@
   </style>
 </head>
 <body>
-  <!-- <div class="top">
+  <div class="top">
     <form action="form2.php" method="post">
       <div class="explanation">叶えたい夢を入力してください (なるべく具体的に)</div>
       <textarea name="desire" class="textarea" placeholder="お金持ちになりたい。"></textarea><br>
@@ -175,13 +175,43 @@
       <input type="file" name="image">
       <input type="submit" value="背景ランダム表示"> 
       <?php
-      // if ($msg) {
-      //   echo '<p>' . $msg . '</p>';
-      // }
-      // sort($images);
+      if ($msg) {
+        echo '<p>' . $msg . '</p>';
+      }
+      sort($images);
+
+      
+      $name = $_POST['desire'];
+
+      //   header('Location: form.php');
+      //   exit();
+      // } else {
+      $dsn = 'mysql:host=us-cdbr-iron-east-04.cleardb.net;dbname=heroku_e58da4378ec57aa;charset=utf8';
+      $user = 'b5d9b2d1576d08';
+      $password = 'b9a09ecd';
+    
+      try { 
+        $db = new PDO ($dsn, $user, $password);
+        $db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
+        // $stmt = $db->prepare(" INSERT INTO dream (name) VALUES (:name) ");
+        // $stmt->bindParam(':name', $name, PDO::PARAM_STR);
+        // $stmt->execute();
+        $db->setAttribute(PDO::ATTER_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        echo $_COOKIE['desire'];
+        $db = NULL;
+    
+        // header('Location: form.php');
+        // exit();
+      } catch(Exception $e) {
+        // die ('エラー：' . $e->getMessage());
+        echo '<span class="error">エラーがありました。</span><br>';
+        echo $e->getMessage();
+        exit();
+      }
+    
       ?>
     </form>
-  </div> -->
+  </div>
 <?php
 
 $column = 1;
