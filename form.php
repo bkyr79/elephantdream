@@ -164,7 +164,7 @@
   </style>
 </head>
 <body>
-  <div class="top">
+  <!-- <div class="top">
     <form action="form2.php" method="post">
       <div class="explanation">叶えたい夢を入力してください (なるべく具体的に)</div>
       <textarea name="desire" class="textarea" placeholder="お金持ちになりたい。"></textarea><br>
@@ -181,7 +181,7 @@
       sort($images);
       ?>
     </form>
-  </div>
+  </div> -->
 <?php
 
 $column = 1;
