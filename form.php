@@ -175,10 +175,10 @@
       <input type="file" name="image">
       <input type="submit" value="背景ランダム表示"> 
       <?php
-      if ($msg) {
-        echo '<p>' . $msg . '</p>';
-      }
-      sort($images);
+      // if ($msg) {
+      //   echo '<p>' . $msg . '</p>';
+      // }
+      // sort($images);
       ?>
     </form>
   </div> -->
