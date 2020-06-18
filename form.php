@@ -191,8 +191,9 @@
           // $stmt->bindParam(':name', $name, PDO::PARAM_STR);
           // $stmt->execute();
           $db->setAttribute(PDO::ATTER_ERRMODE, PDO::ERRMODE_EXCEPTION);
-          echo "<script>console.log( '$user' );</script>";
+          echo $_COOKIE['desire'];
           $db = NULL;
+
           // header('Location: form.php');
           // exit();
         } catch(Exception $e) {
