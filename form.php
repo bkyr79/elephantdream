@@ -192,7 +192,7 @@
           // $stmt->execute();
           $db->setAttribute(PDO::ATTER_ERRMODE, PDO::ERRMODE_EXCEPTION);
           echo $_COOKIE['desire'];
-          $db = NULL;
+          // $db = NULL;
 
           // header('Location: form.php');
           // exit();
