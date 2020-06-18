@@ -191,7 +191,7 @@
           // $stmt->bindParam(':name', $name, PDO::PARAM_STR);
           // $stmt->execute();
           $db->setAttribute(PDO::ATTER_ERRMODE, PDO::ERRMODE_EXCEPTION);
-          echo 'console.log('あああ')';
+          echo "<script>console.log( '$user' );</script>";
           $db = NULL;
           // header('Location: form.php');
           // exit();
